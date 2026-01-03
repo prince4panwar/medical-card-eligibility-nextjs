@@ -1,0 +1,5 @@
+import Loading from "@/components/Loading";
+
+export default function LoadingPage() {
+  return <Loading fullScreen size="lg" text="Loading Admin Page..." />;
+}
