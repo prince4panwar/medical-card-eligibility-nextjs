@@ -2,15 +2,43 @@
   {
     "slug": "california",
     "name": "California",
-    "ageRequirement": 18,
+    "age": 18,
     "fee": 99,
-    "description": "Medical card of california."
+    "description": "Medical marijuana card program for California residents."
   },
   {
     "slug": "texas",
     "name": "Texas",
-    "ageRequirement": 21,
+    "age": 21,
     "fee": 120,
-    "description": "Medical card of texas."
+    "description": "Limited medical card eligibility under Texas Compassionate Use Program."
+  },
+  {
+    "slug": "florida",
+    "name": "Florida",
+    "age": 19,
+    "fee": 75,
+    "description": "Florida medical card program with licensed physician approval."
+  },
+  {
+    "slug": "new-york",
+    "name": "New York",
+    "age": 22,
+    "fee": 150,
+    "description": "New York medical cannabis program for qualifying conditions."
+  },
+  {
+    "slug": "arizona",
+    "name": "Arizona",
+    "age": 17,
+    "fee": 140,
+    "description": "Arizona medical marijuana card for approved medical conditions."
+  },
+  {
+    "slug": "colorado",
+    "name": "Colorado",
+    "age": 16,
+    "fee": 90,
+    "description": "Colorado medical card program with online physician evaluation."
   }
 ]
