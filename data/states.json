@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "california",
+    "name": "California",
+    "ageRequirement": 18,
+    "fee": 99,
+    "description": "Medical card of california."
+  },
+  {
+    "slug": "texas",
+    "name": "Texas",
+    "ageRequirement": 21,
+    "fee": 120,
+    "description": "Medical card of texas."
+  }
+]
