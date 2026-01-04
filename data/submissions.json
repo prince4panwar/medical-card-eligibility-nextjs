@@ -47,5 +47,12 @@
     "age": "34",
     "state": "california",
     "date": "2026-01-03T16:14:24.808Z"
+  },
+  {
+    "name": "Prince Panwar",
+    "email": "princepanwar420420@gmail.com",
+    "age": 23,
+    "state": "texas",
+    "date": "2026-01-04T05:55:59.366Z"
   }
 ]
