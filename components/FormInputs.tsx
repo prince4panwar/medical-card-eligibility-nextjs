@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import states from "@/data/states.json";
+import ErrorMessage from "./FormInputError";
 
 export type FormValues = {
   name: string;
@@ -76,9 +77,7 @@ export default function FormInputs() {
             className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm
                        focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          {errors.name && (
-            <p className="mt-1 text-xs text-red-500">{errors.name.message}</p>
-          )}
+          <ErrorMessage message={errors.name?.message} />
         </div>
 
         <div>
@@ -89,9 +88,7 @@ export default function FormInputs() {
             className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm
                        focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          {errors.email && (
-            <p className="mt-1 text-xs text-red-500">{errors.email.message}</p>
-          )}
+          <ErrorMessage message={errors.email?.message} />
         </div>
 
         <div>
@@ -102,9 +99,7 @@ export default function FormInputs() {
             className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm
                        focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          {errors.age && (
-            <p className="mt-1 text-xs text-red-500">{errors.age.message}</p>
-          )}
+          <ErrorMessage message={errors.age?.message} />
         </div>
 
         <textarea
@@ -124,9 +119,7 @@ export default function FormInputs() {
             />
             I agree to the privacy policy
           </label>
-          {errors.agree && (
-            <p className="mt-1 text-xs text-red-500">{errors.agree.message}</p>
-          )}
+          <ErrorMessage message={errors.agree?.message} />
         </div>
 
         <button
