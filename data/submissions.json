@@ -1,13 +1,13 @@
 [
   {
-    "name": "Prince Panwar",
-    "email": "princepanwar420420@gmail.com",
+    "name": "Prince",
+    "email": "prince@gmail.com",
     "age": "43",
     "state": "texas",
     "date": "2026-01-03T14:39:34.405Z"
   },
   {
-    "name": "Sahil Kumar",
+    "name": "Sahil",
     "email": "tibax55032@noidem.com",
     "age": "23",
     "state": "texas",
@@ -19,40 +19,5 @@
     "age": "36",
     "state": "california",
     "date": "2026-01-03T14:49:42.185Z"
-  },
-  {
-    "name": "Prince Panwar",
-    "email": "princepanwar420420@gmail.com",
-    "age": "34",
-    "state": "california",
-    "date": "2026-01-03T15:20:03.469Z"
-  },
-  {
-    "name": "Prince Panwar",
-    "email": "princepanwar420420@gmail.com",
-    "age": "35",
-    "state": "california",
-    "date": "2026-01-03T15:24:01.277Z"
-  },
-  {
-    "name": "joe",
-    "email": "priyanka@gmail.com",
-    "age": "43",
-    "state": "california",
-    "date": "2026-01-03T15:26:15.633Z"
-  },
-  {
-    "name": "fsdaf",
-    "email": "priyanka@gmail.com",
-    "age": "34",
-    "state": "california",
-    "date": "2026-01-03T16:14:24.808Z"
-  },
-  {
-    "name": "Prince Panwar",
-    "email": "princepanwar420420@gmail.com",
-    "age": 23,
-    "state": "texas",
-    "date": "2026-01-04T05:55:59.366Z"
   }
 ]

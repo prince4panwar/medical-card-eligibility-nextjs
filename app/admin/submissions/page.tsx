@@ -1,3 +1,6 @@
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
+import { getAdminUser } from "@/lib/auth";
 import fs from "fs/promises";
 import path from "path";
 
@@ -9,22 +12,29 @@ type Submission = {
   date: string;
 };
 
-export const metadata = {
-  title: "Admin - Submissions",
-  description: "Admin view of all submissions",
-};
-
 export default async function AdminSubmissionsPage() {
+  const cookieStore = await cookies();
+  const admin = getAdminUser(cookieStore);
+
+  if (!admin) {
+    redirect("/admin/login");
+  }
+
   const filePath = path.join(process.cwd(), "data/submissions.json");
-  const submissions: Submission[] = JSON.parse(
-    await fs.readFile(filePath, "utf-8")
-  );
+  const submissions = JSON.parse(await fs.readFile(filePath, "utf-8"));
 
   return (
     <main className="mx-auto max-w-5xl p-6">
-      <h1 className="mb-6 text-2xl font-semibold text-gray-900">
-        Submissions ({submissions.length})
-      </h1>
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-2xl font-semibold text-gray-900">
+          Submissions ({submissions?.length})
+        </h1>
+        <form action="/api/admin/logout" method="POST">
+          <button className="rounded bg-red-600 px-4 py-2 text-white">
+            Logout
+          </button>
+        </form>
+      </div>
 
       {submissions.length === 0 ? (
         <p className="text-gray-600">No submissions yet.</p>
@@ -42,7 +52,7 @@ export default async function AdminSubmissionsPage() {
             </thead>
 
             <tbody className="divide-y">
-              {submissions.map((s, index) => (
+              {submissions.map((s: Submission, index: number) => (
                 <tr key={index} className="hover:bg-gray-50 transition">
                   <td className="px-4 py-3">{s.name}</td>
                   <td className="px-4 py-3">{s.email}</td>
