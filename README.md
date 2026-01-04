@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Medical Card Eligibility Checker (Next.js)
 
-## Getting Started
+A small **Next.js (App Router)** application that allows users to check medical card eligibility based on their U.S. state and submit an evaluation form. The project also includes a basic **Admin Dashboard** protected using **JWT authentication with HTTP-only cookies** (no database).
 
-First, run the development server:
+---
+
+## 📦 Prerequisites
+
+Make sure you have the following installed:
+
+- **Node.js** (v18 or later recommended)
+- **npm**
+
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/prince4panwar/medical-card-eligibility-nextjs.git
+```
+
+### 2️⃣ Navigate to the project directory
+
+```bash
+cd medical-card-eligibility-checker
+```
+
+### 3️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env.local` file in the root directory and add the following:
+
+```env
+ADMIN_EMAIL=admin@example.com
+ADMIN_PASSWORD=admin123
+ADMIN_SECRET=super-secret-admin-key
+```
+
+⚠️ **Important:** Restart the development server after adding or updating environment variables.
+
+---
+
+## ▶️ Running the Project
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and visit:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🔑 Admin Authentication
 
-To learn more about Next.js, take a look at the following resources:
+### Admin Login Page
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+/admin/login
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Demo Credentials
 
-## Deploy on Vercel
+- **Email:** `admin@example.com`
+- **Password:** `admin123`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+After successful login, you can access:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+/admin
+/admin/submissions
+```
