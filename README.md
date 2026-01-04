@@ -24,7 +24,7 @@ git clone https://github.com/prince4panwar/medical-card-eligibility-nextjs.git
 ### 2️⃣ Navigate to the project directory
 
 ```bash
-cd medical-card-eligibility-checker
+cd medical-card-eligibility-nextjs
 ```
 
 ### 3️⃣ Install dependencies
